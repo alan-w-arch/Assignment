@@ -1,0 +1,16 @@
+{
+    "name": "resilient-job-scraper",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "apify-client": "^2.25.0",
+        "next": "15.5.2",
+        "react": "19.1.1",
+        "react-dom": "19.1.1"
+    }
+}

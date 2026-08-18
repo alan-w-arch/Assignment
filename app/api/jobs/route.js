@@ -1,0 +1,2 @@
+import{ingestJobs}from "@/lib/source-manager";export const dynamic="force-dynamic";
+export async function GET(request){const{searchParams}=new URL(request.url),n=Number(searchParams.get("limit")||"50"),limit=Math.min(Math.max(Number.isFinite(n)?n:50,1),100);const result=await ingestJobs({limit,retriesPerSource:1});return Response.json(result,{status:result.report.status==="success"?200:503,headers:{"Cache-Control":"no-store"}})}
